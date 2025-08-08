@@ -9,60 +9,16 @@
       background: #fff;
       color: #000;
       padding: 1em;
-      margin: 0;
     }
     iframe {
-      width: 100%;
+      width: 300px;
       height: 600px;
       border: none;
-    }
-    .nav-buttons {
-      position: fixed;
-      bottom: 1em;
-      right: 1em;
-      display: grid;
-      grid-template-columns: 50px 50px;
-      grid-template-rows: 50px 50px;
-      gap: 5px;
-    }
-    .nav-buttons button {
-      font-size: 1.2em;
-      padding: 0.5em;
-      border: none;
-      background: #eee;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    .nav-buttons button:hover {
-      background: #ddd;
     }
   </style>
 </head>
 <body>
-  <h1>📄 My Document</h1>
+  
   <iframe src="https://docs.google.com/document/d/e/2PACX-1vQjifqJikS48x0RAv6dGI1ITvF7JPQkD7is63xN1f6m8QQfyElYTSLTBpDindNBeF2ySXxklGeZWaAF/pub?embedded=true"></iframe>
-
-  <!-- Navigation Buttons -->
-  <div class="nav-buttons">
-    <button onclick="scrollUp()">⬆️</button>
-    <button onclick="scrollRight()">➡️</button>
-    <button onclick="scrollLeft()">⬅️</button>
-    <button onclick="scrollDown()">⬇️</button>
-  </div>
-
-  <script>
-    function scrollUp() {
-      window.scrollBy({ top: -100, behavior: 'smooth' });
-    }
-    function scrollDown() {
-      window.scrollBy({ top: 100, behavior: 'smooth' });
-    }
-    function scrollLeft() {
-      window.scrollBy({ left: -100, behavior: 'smooth' });
-    }
-    function scrollRight() {
-      window.scrollBy({ left: 100, behavior: 'smooth' });
-    }
-  </script>
 </body>
 </html>
