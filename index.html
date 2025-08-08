@@ -10,17 +10,33 @@
       line-height: 1.6;
       background-color: #fff;
       color: #000;
+      font-size: 16px;
     }
     h1, h2 {
       color: #333;
     }
+    button {
+      margin-bottom: 1em;
+      padding: 0.5em 1em;
+      font-size: 1em;
+    }
   </style>
 </head>
 <body>
+  <button onclick="increaseFont()">Increase Font Size</button>
+
   <h1>My Study Notes</h1>
   <h2>Topic 1</h2>
   <p>This is a note about topic 1...</p>
   <h2>Topic 2</h2>
   <p>This is a note about topic 2...</p>
+
+  <script>
+    function increaseFont() {
+      const body = document.body;
+      const currentSize = parseFloat(window.getComputedStyle(body).fontSize);
+      body.style.fontSize = (currentSize + 2) + 'px';
+    }
+  </script>
 </body>
 </html>
