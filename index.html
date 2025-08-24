@@ -1,27 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Doc Viewer</title>
-    <style>
-        /* This style makes the iframe fill the entire page */
-        html, body, #doc-iframe {
-            height: 100%;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            border: none;
-            overflow: hidden;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Momentum Notes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 1em;
+      font-family: sans-serif;
+      background-color: #fdfdfd;
+      color: #111;
+      line-height: 1.6;
+    }
+    a {
+      display: block;
+      text-align: center;
+      margin-top: 40vh;
+      font-size: 1.2em;
+      color: #0066cc;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-    <!-- 
-        This iframe directly loads the public Google Doc.
-        It is the most straightforward way to embed content from another site.
-    -->
-    <iframe id="doc-iframe" src="https://docs.google.com/document/d/e/2PACX-1vQjifqJikS48x0RAv6dGI1ITvF7JPQkD7is63xN1f6m8QQfyElYTSLTBpDindNBeF2ySXxklGeZWaAF/pub"></iframe>
-
+  <a href="https://docs.google.com/document/d/e/2PACX-1vQjifqJikS48x0RAv6dGI1ITvF7JPQkD7is63xN1f6m8QQfyElYTSLTBpDindNBeF2ySXxklGeZWaAF/pub">
+    Tap to open Momentum Notes
+  </a>
 </body>
 </html>
