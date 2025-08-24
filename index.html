@@ -1,54 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Kindle Notes</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      background: #fff;
-      font-family: sans-serif;
-      color: #000;
-      text-align: center;
-    }
-    #noteArea {
-      width: 100%;
-      height: calc(100vh - 60px); /* Full height minus button space */
-      font-size: 1.5em;
-      padding: 10px;
-      box-sizing: border-box;
-      border: none;
-      resize: none;
-      background: #f9f9f9;
-      color: #333;
-    }
-    .controls {
-      margin: 10px 0;
-    }
-    button {
-      font-size: 1em;
-      padding: 5px 10px;
-      margin: 0 5px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Doc Viewer</title>
+    <style>
+        /* This style makes the iframe fill the entire page */
+        html, body, #doc-iframe {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            border: none;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
-  <div class="controls">
-    <button onclick="resizeText(1)">🔍 A+</button>
-    <button onclick="resizeText(-1)">🔎 A−</button>
-  </div>
+    <!-- 
+        This iframe directly loads the public Google Doc.
+        It is the most straightforward way to embed content from another site.
+    -->
+    <iframe id="doc-iframe" src="https://docs.google.com/document/d/e/2PACX-1vQjifqJikS48x0RAv6dGI1ITvF7JPQkD7is63xN1f6m8QQfyElYTSLTBpDindNBeF2ySXxklGeZWaAF/pub"></iframe>
 
-  <textarea id="noteArea" readonly>
-Sometimes the most powerful thing you can do is pause, breathe, and let the moment be enough.
-  </textarea>
-
-  <script>
-    function resizeText(change) {
-      var area = document.getElementById("noteArea");
-      var currentSize = parseFloat(window.getComputedStyle(area).fontSize);
-      area.style.fontSize = (currentSize + change) + "px";
-    }
-  </script>
 </body>
 </html>
