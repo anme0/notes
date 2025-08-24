@@ -3,16 +3,18 @@
 <head>
   <title>Kindle Notes</title>
   <style>
-    body {
-      font-family: sans-serif;
-      padding: 20px;
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
       background: #fff;
+      font-family: sans-serif;
       color: #000;
       text-align: center;
     }
     #noteArea {
       width: 100%;
-      height: 300px;
+      height: calc(100vh - 60px); /* Full height minus button space */
       font-size: 1.2em;
       padding: 10px;
       box-sizing: border-box;
@@ -32,8 +34,6 @@
   </style>
 </head>
 <body>
-  <h2>My Kindle Notes</h2>
-
   <div class="controls">
     <button onclick="resizeText(1)">🔍 A+</button>
     <button onclick="resizeText(-1)">🔎 A−</button>
@@ -42,8 +42,6 @@
   <textarea id="noteArea" readonly>
 Sometimes the most powerful thing you can do is pause, breathe, and let the moment be enough.
   </textarea>
-
-  <p>Note: Kindle browsers don’t save text. Copy manually or take a screenshot.</p>
 
   <script>
     function resizeText(change) {
